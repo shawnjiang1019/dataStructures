@@ -1,6 +1,7 @@
 class Node{
   int data;
   Node next;
+
   
 
   public Node(int data, Node next){
@@ -25,6 +26,14 @@ class Node{
       current = current.next;
     }
     current.next = new Node(data, n);
+  }
+
+  public void showList(Node node){
+
+    while (node.next != null){
+      System.out.println(node.data);
+      node = node.next;
+    }
   }
 
 
